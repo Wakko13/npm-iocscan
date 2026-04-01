@@ -1,0 +1,16 @@
+{
+  "name": "example-malicious",
+  "version": "1.0.0",
+  "description": "Package manifest containing malicious package IOCs",
+  "main": "index.js",
+  "dependencies": {
+    "plain-crypto-js": "^1.0.0",
+    "axios": "^1.7.7"
+  },
+  "devDependencies": {
+    "vite": "^5.4.8"
+  },
+  "scripts": {
+    "dev": "vite"
+  }
+}

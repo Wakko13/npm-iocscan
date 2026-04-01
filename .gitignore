@@ -1,0 +1,29 @@
+# .gitignore for npm-iocscan
+
+# Temporary files
+*.tmp
+*.log
+*.cache
+
+# Test outputs
+test-results/
+coverage/
+*.coverage
+
+# PowerShell-specific
+*.psm1
+.vscode/
+*/Debug/
+*/bin/
+
+# OS-specific
+.DS_Store
+Thumbs.db
+
+# IDE
+*.code-workspace
+.idea/
+*.sublime-project
+
+# Dependencies (if ever added)
+node_modules/
