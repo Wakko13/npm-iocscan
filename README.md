@@ -24,28 +24,14 @@ A comprehensive PowerShell security scanner for Node.js projects that detects ma
 ./npm-iocscan.ps1 -Path ./path/to/project -ScanTransitive
 ```
 
-## Installation
+## Execution Model
 
-### Option 1: Direct Use
+This project is intentionally direct-run only.
+
 ```powershell
-# Copy the script to your tools folder
-Copy-Item .\npm-iocscan.ps1 $PROFILE\..\tools\
-
-# Run directly
+# Run in place with no installation, profile modification, or persistence
 ./npm-iocscan.ps1 -Path .
-```
-
-### Option 2: PowerShell Profile Integration
-Add to your PowerShell `$PROFILE`:
-```powershell
-function npm-iocscan {
-    & "C:\path\to\npm-iocscan\npm-iocscan.ps1" @args
-}
-```
-
-Then use from any directory:
-```powershell
-npm-iocscan -Path . -ScanTransitive
+./npm-iocscan.ps1 -Path . -ScanTransitive
 ```
 
 ## IOC Coverage
