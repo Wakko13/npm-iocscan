@@ -18,7 +18,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Severity classification (CRITICAL, HIGH, MEDIUM)
 - Comprehensive documentation (README, USAGE, IOC-LIST)
 - Pester test suite with fixtures
-- MIT License
+- AGPL-3.0-only license
 
 ### Documentation
 - README.md – Quick start and feature overview

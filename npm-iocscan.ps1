@@ -34,7 +34,7 @@ Requires: PowerShell 5.0+
 Optional: Docker (for -ScanTransitive flag)
 
 Author: npm-iocscan contributors
-License: MIT
+License: AGPL-3.0-only
 #>
 
 param(
