@@ -9,7 +9,7 @@ Validates detection accuracy against known fixtures:
 - Suspicious lifecycle scripts should be flagged
 - Exfiltration patterns should be caught
 
-Run with: Invoke-Pester test.ps1 -Verbose
+Run with: Invoke-Pester ./scanner.tests.ps1 -Verbose
 #>
 
 Describe "npm-iocscan Scanner" {

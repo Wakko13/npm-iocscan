@@ -13,15 +13,20 @@ A comprehensive PowerShell security scanner for Node.js projects that detects ma
 
 ## Quick Start
 
+Important: `-Path .` scans only the current working directory tree. If you run from the tool repository, you will mostly scan the tool repository.
+
 ```powershell
-# Static analysis (fast, no docker required)
-./npm-iocscan.ps1 -Path .
+# Recommended: point to the project root you actually want to inspect
+./npm-iocscan.ps1 -Path F:\github\<gh id>\<repo>
 
-# Full scan with transitive dependency resolution
-./npm-iocscan.ps1 -Path . -ScanTransitive
+# Recommended for broader developer workspace scans
+./npm-iocscan.ps1 -Path F:\github
 
-# Scan a specific project directory
-./npm-iocscan.ps1 -Path ./path/to/project -ScanTransitive
+# Full scan with transitive dependency resolution on a target project
+./npm-iocscan.ps1 -Path F:\github\<gh id>\<repo> -ScanTransitive
+
+# Optional: scan an entire drive (slow/noisy on large disks)
+./npm-iocscan.ps1 -Path F:\
 ```
 
 ## Execution Model
@@ -30,8 +35,9 @@ This project is intentionally direct-run only.
 
 ```powershell
 # Run in place with no installation, profile modification, or persistence
-./npm-iocscan.ps1 -Path .
-./npm-iocscan.ps1 -Path . -ScanTransitive
+# Use explicit roots for where your code and npm projects actually live
+./npm-iocscan.ps1 -Path F:\github
+./npm-iocscan.ps1 -Path C:\Users\<you>\source
 ```
 
 ## IOC Coverage
@@ -53,7 +59,7 @@ The scanner detects:
 Run the test suite:
 ```powershell
 cd tests
-Invoke-Pester test.ps1 -Verbose
+Invoke-Pester ./scanner.tests.ps1 -Verbose
 ```
 
 Tests validate:
