@@ -18,16 +18,20 @@ If specified, resolves full dependency trees in isolated Docker containers
 using 'npm install --ignore-scripts' (safe, no code execution).
 
 .EXAMPLE
-./npm-iocscan.ps1 -Path .
-Basic static scan of current directory.
+./npm-iocscan.ps1 -Path F:\github\<gh id>\<repo>
+Scan a specific project root. Recommended over -Path . when running from the tool repository.
 
 .EXAMPLE
-./npm-iocscan.ps1 -Path . -ScanTransitive
-Full scan including transitive dependency resolution (requires Docker).
+./npm-iocscan.ps1 -Path F:\github
+Scan a broader developer workspace root.
 
 .EXAMPLE
-./npm-iocscan.ps1 -Path C:\Projects\my-app -ScanTransitive
-Scan a specific project with transitive resolution.
+./npm-iocscan.ps1 -Path F:\github\<gh id>\<repo> -ScanTransitive
+Full scan of a target project including transitive dependency resolution (requires Docker).
+
+.EXAMPLE
+./npm-iocscan.ps1 -Path F:\
+Scan an entire drive (slow and noisy on large disks).
 
 .NOTES
 Requires: PowerShell 5.0+

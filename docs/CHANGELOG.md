@@ -28,24 +28,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
-## Future Releases (Planned)
-
-### [1.1.0] – Q2 2026 (Planned)
-- Add JSON output format for CI/CD integration
-- Support SARIF format for GitHub Advanced Security
-- Add baseline/whitelist capability
-- Performance optimization for large monorepos
-- PowerShell Gallery publishing
-
-### [1.2.0] – Q3 2026 (Planned)
-- Integration with npm audit for CVE correlation
-- SBOM (Software Bill of Materials) generation
-- Custom IOC list support
-- Rate limiting detection
-- Behavioral analysis for novel packages
-
----
-
 ## How to Contribute
 
 Found a new IOC? Malicious package? Please submit:
